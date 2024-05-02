@@ -1,4 +1,4 @@
-# File Creation
+#File Creation
 def create_file():
     try:
         with open("my_file.txt", "w") as file:
@@ -13,22 +13,22 @@ def create_file():
         print("File creation process completed.")
 
 
-# File Reading and Display
+#File Reading and Display
 def read_file():
     try:
-        with open("my_file.txt", "r") as file:
+        with open("my_file.txt", 'r') as file:
             print("Contents of my_file.txt:")
             for line in file:
                 print(line.strip())  # Strip removes the newline character at the end
     except FileNotFoundError:
-        print("File not found. Unable to read the file.")
+        print("File not found.Unable to read the file.")
     except Exception as e:
         print("An error occurred:", e)
     finally:
         print("File reading process completed.")
 
 
-# File Appending
+#FileAppending
 def append_to_file():
     try:
         with open("my_file.txt", "a") as file:
@@ -43,7 +43,7 @@ def append_to_file():
         print("File appending process completed.")
 
 
-# Main function to execute the tasks
+#Main function to execute the tasks.
 def main():
     create_file()
     read_file()
